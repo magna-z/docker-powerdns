@@ -17,6 +17,6 @@ RUN export PDNS_VERSION=4.0.1 && \
     cd /tmp/pdns-$PDNS_VERSION && ./configure --with-modules="remote" && make && make install && \
     cd / && rm -rf /tmp/pdns-$PDNS_VERSION
 
-EXPOSE 53 53/udp
+EXPOSE 53 53/udp 8081
 
 ENTRYPOINT ["/usr/local/sbin/pdns_server"]
