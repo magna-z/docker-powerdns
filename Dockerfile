@@ -2,10 +2,10 @@ FROM alpine:3.4
 
 MAINTAINER Maxim Zalysin <zalysin.m@gmail.com>
 
-LABEL pro.magnaz.docker.powerdns.version="{\"container\": 1.0, \"alpine\": 3.4, \"powerdns\": 4.0.1}"
+LABEL pro.magnaz.docker.powerdns.version="{\"container\": 1.1, \"alpine\": 3.4, \"powerdns\": 4.0.1}"
 
 RUN export PDNS_VERSION=4.0.1 && \
-    apk --no-cache add --virtual .build-deps \
+    apk --no-cache add --virtual build-dependencies \
     g++ \
     gcc \
     libc-dev \
@@ -15,6 +15,7 @@ RUN export PDNS_VERSION=4.0.1 && \
     curl && \
     curl -sS https://downloads.powerdns.com/releases/pdns-$PDNS_VERSION.tar.bz2 | tar xjf - -C /tmp && \
     cd /tmp/pdns-$PDNS_VERSION && ./configure --with-modules="remote" && make && make install && \
+    apk del build-dependencies
     cd / && rm -rf /tmp/pdns-$PDNS_VERSION
 
 EXPOSE 53 53/udp 8081
