@@ -6,4 +6,3 @@ Official website: https://powerdns.com
 
 Modules included:
  * Generic MySQL backend (gmysql)
- * Remote Backend (remote)
