@@ -5,6 +5,5 @@ Official website: https://powerdns.com
 [![](https://images.microbadger.com/badges/image/magnaz/powerdns.svg)](https://microbadger.com/images/magnaz/powerdns "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/magnaz/powerdns.svg)](https://microbadger.com/images/magnaz/powerdns "Get your own version badge on microbadger.com")
 
 Modules included:
- * Bind zone file backend (bind)
  * Generic MySQL backend (gmysql)
  * Remote Backend (remote)
