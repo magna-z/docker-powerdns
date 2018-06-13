@@ -37,7 +37,7 @@ RUN set -ex && \
     CPPFLAGS=-DSIZEOF_LONG_INT=8 ./configure --enable-gui=no --enable-drivers=no --enable-iconv --with-iconv-char-enc=UTF8 --with-iconv-ucode-enc=UTF16LE --libdir=/usr/lib/x86_64-linux-gnu/ --prefix=/usr --sysconfdir=/etc && \
     make install && \
     \
-    wget -qO - https://downloads.powerdns.com/releases/pdns-$POWERDNS_VERSION.tar.bz2 | tar xjf - -C /tmp \
+    wget -qO - https://downloads.powerdns.com/releases/pdns-$POWERDNS_VERSION.tar.bz2 | tar xjf - -C /tmp && \
     cd /tmp/pdns-$POWERDNS_VERSION && \
     ./configure --prefix="" --exec-prefix=/usr --sysconfdir=/etc/powerdns --with-modules="godbc" --with-dynmodules="" && \
     make install && \
