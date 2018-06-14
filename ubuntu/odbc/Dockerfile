@@ -42,7 +42,7 @@ RUN set -ex && \
     ./configure --prefix="" --exec-prefix=/usr --sysconfdir=/etc/powerdns --with-modules="godbc" --with-dynmodules="" && \
     make install && \
     \
-    apt-get autoremove --yes g++ gcc wget && \
+    apt-get autoremove --yes g++ gcc && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/*
 
