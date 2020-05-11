@@ -1,11 +1,25 @@
-PowerDNS Authoritative Nameserver
-=================================
+PowerDNS Authoritative Server on Alpine Linux
+---
 
-Official website: https://powerdns.com
+Official website: <https://powerdns.com>  
+Current version: **4.3.0**
 
-Current version: **4.1.3**
+[![](https://images.microbadger.com/badges/image/magnaz/powerdns.svg)](https://microbadger.com/images/magnaz/powerdns "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/magnaz/powerdns.svg)](https://microbadger.com/images/magnaz/powerdns "Get your own version badge on microbadger.com")
 
-Available tags:
+Modules included:
+ - [Generic MySQL backend (gmysql)](https://doc.powerdns.com/authoritative/backends/generic-mysql.html)
+ - [Generic PostgreSQL backend (gpgsql)](https://doc.powerdns.com/authoritative/backends/generic-postgresql.html)
 
- - latest, 4.1.3, 4.1.3-alpine, 4.1.3-alpine-mysql
- - 4.1.3-ubuntu-odbc
+### Available tags:
+ - latest, 4.3, 4.3.0
+ - 4.1.3
+
+### Available SQL schemas
+```bash
+docker run --rm --entrypoint ls magnaz/powerdns /share/doc/pdns
+```
+
+### Read default config file
+```bash
+docker run --rm --entrypoint cat magnaz/powerdns /etc/powerdns/pdns.conf-dist
+```
