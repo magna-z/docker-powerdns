@@ -10,7 +10,6 @@ RUN set -ex \
       libstdc++ \
       mariadb-connector-c \
       postgresql-libs \
-      wget \
     \
     && apk --no-cache add --virtual build-deps \
       boost-dev \
@@ -20,10 +19,11 @@ RUN set -ex \
       make \
       mariadb-dev \
       postgresql-dev \
+      wget \
     \
     && wget -qO - https://downloads.powerdns.com/releases/pdns-$POWERDNS_VERSION.tar.bz2 | tar xjf - -C /tmp \
     && cd /tmp/pdns-$POWERDNS_VERSION \
-    && ./configure --prefix="" --exec-prefix=/usr --sysconfdir=/etc/powerdns --with-modules="gmysql gpgsql" --with-dynmodules="" \
+    && ./configure --sysconfdir=/etc --with-modules="gmysql gpgsql" --with-dynmodules="" \
     && make install \
     \
     && apk del build-deps \
