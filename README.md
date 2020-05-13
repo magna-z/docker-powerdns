@@ -21,5 +21,10 @@ docker run --rm --entrypoint ls magnaz/powerdns /share/doc/pdns
 
 ### Read default config file
 ```bash
-docker run --rm --entrypoint cat magnaz/powerdns /etc/powerdns/pdns.conf-dist
+docker run --rm --entrypoint cat magnaz/powerdns /etc/pdns.conf-dist
+```
+
+### Run
+```bash
+docker run --detach --name=powerdns --network=host --volume=/local/path/to/pdns.conf:/etc/pdns.conf:ro magnaz/powerdns
 ```
