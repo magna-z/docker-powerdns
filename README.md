@@ -2,16 +2,17 @@ PowerDNS Authoritative Server on Alpine Linux
 ---
 
 Official website: <https://powerdns.com>  
-Current version: **4.3.1**
+Current version: **4.4.0**
 
-[![](https://images.microbadger.com/badges/image/magnaz/powerdns.svg)](https://microbadger.com/images/magnaz/powerdns "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/magnaz/powerdns.svg)](https://microbadger.com/images/magnaz/powerdns "Get your own version badge on microbadger.com")
+![](https://img.shields.io/microbadger/layers/magnaz/powerdns/4.4.0) ![](https://img.shields.io/docker/image-size/magnaz/powerdns/4.4.0)
 
 Modules included:
  - [Generic MySQL backend (gmysql)](https://doc.powerdns.com/authoritative/backends/generic-mysql.html)
  - [Generic PostgreSQL backend (gpgsql)](https://doc.powerdns.com/authoritative/backends/generic-postgresql.html)
 
 ### Available tags:
- - latest, 4.3, 4.3.1
+ - 4.4.0, 4.4, latest
+ - 4.3.1, 4.3
  - 4.3.0
  - 4.1.3
 
